@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motoride — маркетинговый отчёт</title>
+<meta name="theme-color" content="#0b0b0b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Motoride">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Motoride <span>маркетинговый отчёт</span></div>
+  <nav id="tabs" class="tabs" role="tablist"></nav>
+</header>
+
+<section class="controls" id="controls">
+  <div class="seg" id="modeSeg" role="group" aria-label="Период">
+    <button data-mode="week" class="on">Неделя</button>
+    <button data-mode="month">Месяц</button>
+    <button data-mode="custom">Свой период</button>
+  </div>
+  <label class="pick" id="pickWeek">Неделя с <select id="selWeek"></select></label>
+  <label class="pick" id="pickMonth" hidden>Месяц <select id="selMonth"></select></label>
+  <span id="pickCustom" hidden>
+    <label class="pick">с <input type="date" id="dFrom"></label>
+    <label class="pick">по <input type="date" id="dTo"></label>
+  </span>
+  <button class="btn primary" id="btnPdf">Скачать PDF</button>
+</section>
+
+<div id="demoBanner" class="banner" hidden>Сейчас показаны ДЕМО-данные. Свои цифры добавьте на вкладке «Ввод данных».</div>
+<div class="printTitle" id="printTitle"></div>
+
+<main id="views"></main>
+
+<div id="tip" class="tip" hidden></div>
+<script src="config.js"></script>
+<script src="data/weeks.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
